@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Link</title>
+  <meta name="description"
+    content="Business Link helps you discover rental properties, transport for hire, financial products, jobs, businesses, vacancies, tenders, and smart shopping comparisons—on one digital platform." />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="./assets/imgs/logo.jpg" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="topbar" role="banner">
+      <a class="brand" href="index.html" aria-label="Business Link home">
+        <div class="brand-badge" aria-hidden="true">
+          <img src="./assets/imgs/business-link.png" class="brand-img" alt="Bs-Lk">
+        </div>
+        <span>Business Link</span>
+        <span class="pill" aria-hidden="true">Mobile app</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Business Link overview">
+        <h1>Discover, compare, and connect—faster.</h1>
+        <p>
+          Business Link is a marketplace-style mobile app that helps people and businesses find opportunities and
+          services in one place—rental/lease listings, transport for hire, financial products, quick jobs, business
+          directory, recommendations, vacancies, tenders, and smart shopping tools for comparing prices and budgeting.
+        </p>
+        <div class="cta-row" role="group" aria-label="Quick links">
+          <a class="btn primary" href="privacy.html">Read the Privacy Policy</a>
+          <a class="btn" href="terms.html">Read the Terms of Service</a>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Key features">
+        <div class="card span6">
+          <h2>Rentals & property advertising</h2>
+          <p>Discover properties available for rent/lease and connect with advertisers or agents.</p>
+        </div>
+        <div class="card span6">
+          <h2>Transport for hire</h2>
+          <p>Find vehicles for hire (e.g., short-distance or delivery needs) and reach out to providers.</p>
+        </div>
+        <div class="card span6">
+          <h2>Finance product discovery</h2>
+          <p>Compare financial products from multiple institutions (availability varies by region and partner).</p>
+        </div>
+        <div class="card span6">
+          <h2>Jobs: quick gigs & worker profiles</h2>
+          <p>Create quick jobs for informal workers and explore simple skilled/unprofessional worker profiles.</p>
+        </div>
+        <div class="card span6">
+          <h2>Business directory & recommendations</h2>
+          <p>Browse a directory of businesses and get recommendations for places and services you may like.</p>
+        </div>
+        <div class="card span6">
+          <h2>Vacancies & tenders</h2>
+          <p>See advertised vacancies and tenders from available sources within the platform.</p>
+        </div>
+        <div class="card span12">
+          <h2>Smart shopping views</h2>
+          <p>Compare prices and build budgets using a digital shopping planner to support better decisions.</p>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Phone verification note">
+        <div class="split">
+          <div class="card">
+            <h2>Phone verification (Firebase)</h2>
+            <p>
+              Business Link can use phone number verification to protect accounts and reduce spam. When enabled, we may
+              send one-time codes via SMS for sign-in and account security.
+            </p>
+            <ul>
+              <li>We use your phone number for authentication and account safety.</li>
+              <li>We don’t sell your personal information.</li>
+              <li>See details in the Privacy Policy.</li>
+            </ul>
+          </div>
+          <!-- <div class="card">
+            <h2>Download</h2>
+            <p>
+              Add your public store links here once available.
+            </p>
+            <ul>
+              <li>Google Play: <strong>ADD YOUR LINK</strong></li>
+              <li>Apple App Store: <strong>ADD YOUR LINK</strong></li>
+            </ul>
+            <p style="margin-top:10px">
+              Contact: <strong>support@YOURDOMAIN.com</strong>
+            </p>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div>© <span id="year"></span> Business Link. All rights reserved.</div>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <span aria-hidden="true">·</span>
+        <a href="terms.html">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+
+</html>
