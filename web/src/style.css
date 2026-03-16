@@ -1,4 +1,5 @@
-/* Business Link – minimal static site styles */
+/* Business Link React SPA styles (ported from static site) */
+
 :root {
   --bg: #0b1220;
   --panel: #0f1b33;
@@ -6,40 +7,41 @@
   --muted: #b7c3e6;
   --brand: #5dd6c1;
   --brand2: #79a7ff;
-  --line: rgba(255, 255, 255, .10);
-  --shadow: 0 12px 30px rgba(0, 0, 0, .35);
+  --line: rgba(255, 255, 255, 0.1);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   --radius: 16px;
 }
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html,
 body {
-  height: 100%
+  height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
   color: var(--text);
   background:
-    radial-gradient(1200px 600px at 15% -10%, rgba(121, 167, 255, .35), transparent 60%),
-    radial-gradient(900px 500px at 85% 10%, rgba(93, 214, 193, .28), transparent 55%),
-    radial-gradient(900px 500px at 60% 110%, rgba(121, 167, 255, .18), transparent 55%),
+    radial-gradient(1200px 600px at 15% -10%, rgba(121, 167, 255, 0.35), transparent 60%),
+    radial-gradient(900px 500px at 85% 10%, rgba(93, 214, 193, 0.28), transparent 55%),
+    radial-gradient(900px 500px at 60% 110%, rgba(121, 167, 255, 0.18), transparent 55%),
     var(--bg);
   line-height: 1.6;
 }
 
 a {
-  color: inherit
+  color: inherit;
 }
 
 a:focus {
-  outline: 2px solid rgba(121, 167, 255, .8);
+  outline: 2px solid rgba(121, 167, 255, 0.8);
   outline-offset: 3px;
-  border-radius: 8px
+  border-radius: 8px;
 }
 
 .container {
@@ -55,7 +57,7 @@ a:focus {
   gap: 16px;
   padding: 10px 12px;
   border: 1px solid var(--line);
-  background: rgba(15, 27, 51, .65);
+  background: rgba(15, 27, 51, 0.65);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 999px;
@@ -68,7 +70,7 @@ a:focus {
   gap: 10px;
   text-decoration: none;
   font-weight: 700;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 
 .brand-badge {
@@ -76,13 +78,7 @@ a:focus {
   height: 34px;
   border-radius: 10px;
   background: linear-gradient(135deg, var(--brand), var(--brand2));
-  box-shadow: 0 8px 24px rgba(93, 214, 193, .18);
-}
-
-.brand-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(93, 214, 193, 0.18);
 }
 
 .nav {
@@ -101,13 +97,7 @@ a:focus {
 
 .nav a:hover {
   border-color: var(--line);
-  color: var(--text)
-}
-
-.nav a[aria-current="page"] {
   color: var(--text);
-  border-color: rgba(121, 167, 255, .55);
-  background: rgba(121, 167, 255, .10);
 }
 
 .hero {
@@ -115,7 +105,11 @@ a:focus {
   padding: 34px 22px;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(15, 27, 51, .65), rgba(15, 27, 51, .35));
+  background: linear-gradient(
+    180deg,
+    rgba(15, 27, 51, 0.65),
+    rgba(15, 27, 51, 0.35)
+  );
   box-shadow: var(--shadow);
 }
 
@@ -146,19 +140,23 @@ a:focus {
   padding: 10px 14px;
   border-radius: 12px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, .06);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
 }
 
 .btn.primary {
-  border-color: rgba(93, 214, 193, .55);
-  background: linear-gradient(135deg, rgba(93, 214, 193, .25), rgba(121, 167, 255, .18));
+  border-color: rgba(93, 214, 193, 0.55);
+  background: linear-gradient(
+    135deg,
+    rgba(93, 214, 193, 0.25),
+    rgba(121, 167, 255, 0.18)
+  );
 }
 
 .btn:hover {
-  transform: translateY(-1px)
+  transform: translateY(-1px);
 }
 
 .grid {
@@ -171,10 +169,10 @@ a:focus {
 .card {
   grid-column: span 12;
   border: 1px solid var(--line);
-  background: rgba(15, 27, 51, .55);
+  background: rgba(15, 27, 51, 0.55);
   border-radius: var(--radius);
   padding: 16px 16px 14px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .22);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 }
 
 .card h2 {
@@ -184,17 +182,17 @@ a:focus {
 
 .card p {
   margin: 0;
-  color: var(--muted)
+  color: var(--muted);
 }
 
 .card ul {
   margin: 10px 0 0;
   color: var(--muted);
-  padding-left: 18px
+  padding-left: 18px;
 }
 
 .card li {
-  margin: 6px 0
+  margin: 6px 0;
 }
 
 .split {
@@ -207,36 +205,36 @@ a:focus {
 .content {
   margin-top: 18px;
   border: 1px solid var(--line);
-  background: rgba(15, 27, 51, .55);
+  background: rgba(15, 27, 51, 0.55);
   border-radius: var(--radius);
   padding: 18px 16px;
   box-shadow: var(--shadow);
 }
 
 .content h1 {
-  margin-top: 0
+  margin-top: 0;
 }
 
 .content h2 {
-  margin: 18px 0 8px
+  margin: 18px 0 8px;
 }
 
 .content h3 {
-  margin: 14px 0 6px
+  margin: 14px 0 6px;
 }
 
 .content p,
 .content li {
-  color: var(--muted)
+  color: var(--muted);
 }
 
 .content a {
-  color: var(--text)
+  color: var(--text);
 }
 
 .footer {
   margin-top: 18px;
-  color: rgba(183, 195, 230, .8);
+  color: rgba(183, 195, 230, 0.8);
   font-size: 13px;
   display: flex;
   flex-wrap: wrap;
@@ -247,7 +245,7 @@ a:focus {
 }
 
 .footer a {
-  color: rgba(232, 238, 252, .9)
+  color: rgba(232, 238, 252, 0.9);
 }
 
 .pill {
@@ -256,8 +254,8 @@ a:focus {
   padding: 4px 10px;
   border-radius: 999px;
   border: 1px solid var(--line);
-  color: rgba(232, 238, 252, .9);
-  background: rgba(255, 255, 255, .04);
+  color: rgba(232, 238, 252, 0.9);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 /* Vehicles page */
@@ -285,7 +283,7 @@ a:focus {
 }
 
 .vehicles-toolbar__label {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .vehicles-grid {
@@ -307,21 +305,23 @@ a:focus {
 
 .vehicle-card {
   border: 1px solid var(--line);
-  background: radial-gradient(140% 180% at 0% 0%, rgba(121, 167, 255, .16), transparent),
-    radial-gradient(140% 180% at 100% 0%, rgba(93, 214, 193, .14), transparent),
-    rgba(15, 27, 51, .9);
+  background:
+    radial-gradient(140% 180% at 0% 0%, rgba(121, 167, 255, 0.16), transparent),
+    radial-gradient(140% 180% at 100% 0%, rgba(93, 214, 193, 0.14), transparent),
+    rgba(15, 27, 51, 0.9);
   border-radius: var(--radius);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, .32);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
-  transition: transform .18s ease-out, box-shadow .18s ease-out, border-color .18s ease-out;
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out;
 }
 
 .vehicle-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
-  border-color: rgba(121, 167, 255, .55);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(121, 167, 255, 0.55);
 }
 
 .vehicle-card__media {
@@ -333,7 +333,7 @@ a:focus {
   width: 100%;
   padding-top: 60%;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .vehicle-card__img-shell img {
@@ -406,8 +406,9 @@ a:focus {
   justify-content: flex-end;
 }
 
-.vehicle-card__btn {
+.vehicle-card__btn-label {
   font-size: 13px;
+  color: var(--muted);
 }
 
 .badge {
@@ -416,15 +417,15 @@ a:focus {
   justify-content: center;
   padding: 3px 9px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 11px;
-  color: rgba(232, 238, 252, .92);
-  background: rgba(255, 255, 255, .03);
+  color: rgba(232, 238, 252, 0.92);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .badge-soft {
-  border-color: rgba(121, 167, 255, .45);
-  background: rgba(121, 167, 255, .14);
+  border-color: rgba(121, 167, 255, 0.45);
+  background: rgba(121, 167, 255, 0.14);
 }
 
 .badge-pill {
@@ -432,19 +433,19 @@ a:focus {
 }
 
 .badge-ok {
-  border-color: rgba(93, 214, 193, .65);
-  background: rgba(93, 214, 193, .16);
+  border-color: rgba(93, 214, 193, 0.65);
+  background: rgba(93, 214, 193, 0.16);
 }
 
 .badge-info {
-  border-color: rgba(121, 167, 255, .6);
-  background: rgba(121, 167, 255, .22);
+  border-color: rgba(121, 167, 255, 0.6);
+  background: rgba(121, 167, 255, 0.22);
 }
 
 .badge-muted {
-  border-color: rgba(255, 255, 255, .08);
-  background: rgba(255, 255, 255, .02);
-  color: rgba(183, 195, 230, .85);
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  color: rgba(183, 195, 230, 0.85);
 }
 
 .btn-ghost {
@@ -452,19 +453,15 @@ a:focus {
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, .06);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 /* Modal */
 
-.modal-open {
-  overflow: hidden;
-}
-
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(3, 7, 18, .65);
+  background: rgba(3, 7, 18, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -476,12 +473,13 @@ a:focus {
   max-width: 960px;
   width: 100%;
   max-height: 100%;
-  background: radial-gradient(100% 140% at 0% 0%, rgba(121, 167, 255, .18), transparent),
-    radial-gradient(120% 160% at 100% 0%, rgba(93, 214, 193, .16), transparent),
+  background:
+    radial-gradient(100% 140% at 0% 0%, rgba(121, 167, 255, 0.18), transparent),
+    radial-gradient(120% 160% at 100% 0%, rgba(93, 214, 193, 0.16), transparent),
     #050816;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, .12);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, .75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
   padding: 18px 18px 14px;
   overflow: auto;
 }
@@ -510,7 +508,7 @@ a:focus {
   border-radius: 999px;
   width: 28px;
   height: 28px;
-  background: rgba(15, 27, 51, .85);
+  background: rgba(15, 27, 51, 0.85);
   color: var(--text);
   cursor: pointer;
   font-size: 18px;
@@ -548,8 +546,8 @@ a:focus {
   width: 30px;
   height: 30px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, .18);
-  background: rgba(5, 8, 22, .85);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(5, 8, 22, 0.85);
   color: var(--text);
   display: inline-flex;
   align-items: center;
@@ -576,7 +574,7 @@ a:focus {
 }
 
 .modal__thumb {
-  border: 1px solid rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 10px;
   padding: 0;
   background: transparent;
@@ -594,8 +592,8 @@ a:focus {
 }
 
 .modal__thumb.is-active {
-  border-color: rgba(121, 167, 255, .8);
-  box-shadow: 0 0 0 1px rgba(121, 167, 255, .45);
+  border-color: rgba(121, 167, 255, 0.8);
+  box-shadow: 0 0 0 1px rgba(121, 167, 255, 0.45);
 }
 
 .modal__description {
@@ -674,10 +672,10 @@ a:focus {
   }
 
   .card.span6 {
-    grid-column: span 6
+    grid-column: span 6;
   }
 
   .card.span4 {
-    grid-column: span 4
+    grid-column: span 4;
   }
 }
